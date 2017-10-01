@@ -21,6 +21,9 @@ android {
         mavenCentral()
         maven { url 'https://maven.google.com' }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
