@@ -39,6 +39,7 @@ public class HorizontalAppListView extends RelativeLayout {
         RecyclerView recyclerView = binding.appList;
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
 
         SnapHelper snapHelper = new GravitySnapHelper(Gravity.START);
         snapHelper.attachToRecyclerView(recyclerView);
