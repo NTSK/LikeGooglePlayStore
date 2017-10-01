@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LikeGooglePlayStore</string>
     <string name="more">MORE</string>
+    <string name="app_list_title"><![CDATA[Popular Apps & Games]]></string>
 </resources>

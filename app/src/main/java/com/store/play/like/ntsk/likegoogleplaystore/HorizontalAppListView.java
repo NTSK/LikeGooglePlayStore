@@ -19,8 +19,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class HorizontalAppListView extends RelativeLayout {
-    private static final String APP_LIST_TITLE = "Popular Apps & Games";
-
     public HorizontalAppListView(Context context) {
         this(context, null);
     }
@@ -32,8 +30,6 @@ public class HorizontalAppListView extends RelativeLayout {
     public HorizontalAppListView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         ViewHorizontalAppListBinding binding = ViewHorizontalAppListBinding.inflate(LayoutInflater.from(context), this, true);
-        binding.appTitle.setText(APP_LIST_TITLE);
-
         HorizontalAppListAdapter adapter = new HorizontalAppListAdapter();
         adapter.addApps(generateApps());
 
@@ -42,7 +38,7 @@ public class HorizontalAppListView extends RelativeLayout {
         recyclerView.setAdapter(adapter);
     }
 
-    class HorizontalAppListAdapter extends RecyclerView.Adapter<HorizontalAppListAdapter.HorizontalAppListViewHolder> {
+    private class HorizontalAppListAdapter extends RecyclerView.Adapter<HorizontalAppListAdapter.HorizontalAppListViewHolder> {
         private List<AppData> apps = new ArrayList<>();
 
         @Override
@@ -66,7 +62,7 @@ public class HorizontalAppListView extends RelativeLayout {
         }
 
         class HorizontalAppListViewHolder extends RecyclerView.ViewHolder {
-            RowAppCardBinding appCardBinding;
+            private RowAppCardBinding appCardBinding;
 
             HorizontalAppListViewHolder(View itemView) {
                 super(itemView);
