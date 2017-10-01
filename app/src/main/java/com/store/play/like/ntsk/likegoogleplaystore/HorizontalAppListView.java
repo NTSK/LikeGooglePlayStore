@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper;
@@ -76,10 +77,16 @@ public class HorizontalAppListView extends RelativeLayout {
                 appCardBinding = RowAppCardBinding.bind(itemView);
             }
 
-            void render(int position) {
+            void render(final int position) {
                 Glide.with(getContext()).load(apps.get(position).getDrawableId()).into(appCardBinding.appImage);
                 appCardBinding.appTitle.setText(apps.get(position).getName());
                 appCardBinding.appScore.setText(apps.get(position).getScore());
+                appCardBinding.appImage.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(getContext(), apps.get(position).getName() + " is Clicked", Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         }
     }
