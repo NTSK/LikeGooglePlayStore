@@ -4,13 +4,16 @@ package com.store.play.like.ntsk.likegoogleplaystore;
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SnapHelper;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
+import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper;
 import com.store.play.like.ntsk.likegoogleplaystore.databinding.RowAppCardBinding;
 import com.store.play.like.ntsk.likegoogleplaystore.databinding.ViewHorizontalAppListBinding;
 
@@ -36,6 +39,9 @@ public class HorizontalAppListView extends RelativeLayout {
         RecyclerView recyclerView = binding.appList;
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
+
+        SnapHelper snapHelper = new GravitySnapHelper(Gravity.START);
+        snapHelper.attachToRecyclerView(recyclerView);
     }
 
     private class HorizontalAppListAdapter extends RecyclerView.Adapter<HorizontalAppListAdapter.HorizontalAppListViewHolder> {

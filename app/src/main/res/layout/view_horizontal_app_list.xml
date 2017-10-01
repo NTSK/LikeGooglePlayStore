@@ -44,11 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/app_header"
                 android:clipToPadding="false"
-                android:paddingBottom="16dp"
-                android:paddingEnd="16dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingStart="16dp" />
+                android:paddingBottom="16dp" />
 
         </RelativeLayout>
 
