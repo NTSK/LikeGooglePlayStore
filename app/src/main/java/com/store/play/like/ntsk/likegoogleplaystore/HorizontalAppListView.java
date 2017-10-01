@@ -93,13 +93,13 @@ public class HorizontalAppListView extends RelativeLayout {
 
     private List<AppData> generateApps() {
         List<AppData> apps = new ArrayList<>();
-        apps.add(new AppData(R.drawable.gmail, "Gmail", "4.0★"));
-        apps.add(new AppData(R.drawable.chrome, "Chrome", "4.1★"));
-        apps.add(new AppData(R.drawable.game, "Google Play Games", "4.2★"));
-        apps.add(new AppData(R.drawable.map, "Map", "4.3★"));
-        apps.add(new AppData(R.drawable.home, "Google Home", "4.4★"));
-        apps.add(new AppData(R.drawable.music, "Google Play Music", "4.5★"));
-        apps.add(new AppData(R.drawable.news, "Google News", "4.6★"));
+        apps.add(new AppData(R.drawable.gmail, "Gmail", "4.0"));
+        apps.add(new AppData(R.drawable.chrome, "Chrome", "4.1"));
+        apps.add(new AppData(R.drawable.game, "Google Play Games", "4.2"));
+        apps.add(new AppData(R.drawable.map, "Map", "4.3"));
+        apps.add(new AppData(R.drawable.home, "Google Home", "4.4"));
+        apps.add(new AppData(R.drawable.music, "Google Play Music", "4.5"));
+        apps.add(new AppData(R.drawable.news, "Google News", "4.6"));
         Collections.shuffle(apps);
         return apps;
     }

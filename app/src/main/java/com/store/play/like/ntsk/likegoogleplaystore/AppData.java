@@ -21,6 +21,6 @@ class AppData {
     }
 
     String getScore() {
-        return score;
+        return score + "★";
     }
 }
